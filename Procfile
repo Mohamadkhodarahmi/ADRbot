@@ -1,1 +1,2 @@
-python bot.py 
+processes:
+  web: python bot.py
