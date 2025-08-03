@@ -7,7 +7,7 @@ import os
 
 # Setup Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-google_creds_str = os.getenv("GOOGLE_CREDS_JSON")
+google_creds_str = os.getenv("GOOGLE_CREDENTIALS")
 google_creds_dict = json.loads(google_creds_str)
 creds = ServiceAccountCredentials.from_json_keyfile_dict(google_creds_dict, scope)
 client = gspread.authorize(creds)
